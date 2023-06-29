@@ -7,6 +7,8 @@ import PostsList2 from "./PostList2"
 
 import Post from "./Post"
 
+import { CreatePost } from "./CreatePost"
+
 const POSTS = [
   { id: 1, title: "Post 1" },
   { id: 2, title: "Post 2" }
@@ -20,6 +22,7 @@ export default function App() {
       <button onClick={() => setCurrentPage(<PostsList1 />)}>Posts List 1</button>
       <button onClick={() => setCurrentPage(<PostsList2 />)}>Posts List 2</button>
       <button onClick={() => setCurrentPage(<Post id={1} />)}>First Post</button>
+      <button onClick={() => setCurrentPage(<CreatePost setCurrentPage={setCurrentPage} />)}>New Post</button>
       <br />
       {currentPage}
     </div>
